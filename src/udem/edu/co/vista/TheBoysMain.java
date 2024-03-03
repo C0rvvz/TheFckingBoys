@@ -1,9 +1,15 @@
 package udem.edu.co.vista;
+
 import udem.edu.co.controlador.impl.FuncionalidadMenuImpl;
+
 import udem.edu.co.controlador.impl.MenuImpl;
+
 import udem.edu.co.modelo.Impl.*;
+
 import java.util.ArrayList;
+
 import java.util.List;
+
 public class TheBoysMain {
     public static void main(String[] args) {
         List<TheSevenImpl> sevens = new ArrayList<>();

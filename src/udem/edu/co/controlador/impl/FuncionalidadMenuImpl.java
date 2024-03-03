@@ -1,16 +1,20 @@
 package udem.edu.co.controlador.impl;
+
 import udem.edu.co.controlador.FuncionalidadMenu;
 import udem.edu.co.modelo.Impl.TheSevenImpl;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+
 public class FuncionalidadMenuImpl implements FuncionalidadMenu {
     private MenuImpl menuImpl;
     private List<TheSevenImpl> sevens;
+
     public FuncionalidadMenuImpl(MenuImpl menuImpl, List<TheSevenImpl> sevens) {
         this.menuImpl = menuImpl;
         this.sevens = sevens;
     }
+
     public void correrPrograma() {
         int opcion;
         do {
@@ -75,11 +79,15 @@ public class FuncionalidadMenuImpl implements FuncionalidadMenu {
                             "⣿⣿⣿⣶⣍⡛⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⢟⣓⣘⠿⣿⣿⣿⣿⡿⠿⠿⠋⠄\n" +
                             "⠄DIGITA CORRECTAMENTE LOS NUMEROS⠄⠄⠄\n");
             }
-        } while(opcion != 11);
+        }
+
+        while(opcion != 11);
     }
+
     private void imprimirTodosSevens() {
         menuImpl.imprimirSevens(sevens);
     }
+
     private void imprimirSevensCategoria(String categoria) {
         List<TheSevenImpl> sevensFiltrados = new ArrayList<>();
         for (TheSevenImpl theSevenImpl : sevens) {
@@ -107,6 +115,7 @@ public class FuncionalidadMenuImpl implements FuncionalidadMenu {
                 }
             }
         }
+
         menuImpl.imprimirSevens(sevensFiltrados);
     }
 }

@@ -1,8 +1,10 @@
 package udem.edu.co.controlador.impl;
+
 import udem.edu.co.controlador.Menu;
 import udem.edu.co.modelo.Impl.TheSevenImpl;
 import java.util.List;
 import java.util.Scanner;
+
 public class MenuImpl implements Menu {
     private Scanner scanner;
     private boolean menuMostrado = false;
@@ -43,12 +45,14 @@ public class MenuImpl implements Menu {
             menuMostrado = true;
         return scanner.nextInt();
     }
+
     public void imprimirSevens(List<TheSevenImpl> sevens) {
         System.out.println("   ⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄ The Seven Disponibles ⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄\n");
         for (TheSevenImpl seven : sevens) {
             System.out.println(seven.getNombre() + " ⠄⠄⠄:> " + seven.getCategoria());
         }
     }
+
     public void imprimirTexto(String texto) {
         System.out.println(texto);
     }

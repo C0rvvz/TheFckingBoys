@@ -6,9 +6,11 @@ import java.util.List;
 
 public class SevenTransformacionImpl implements SevenTransformacion {
     private List<TheSevenImpl> sevens;
+
     public SevenTransformacionImpl(List<TheSevenImpl> sevens) {
         this.sevens = sevens;
     }
+
     public void agregarSevenTransformacion(TheSevenImpl seven) {
         TheSevenImpl sevenRepetido = null;
         for (TheSevenImpl repetidoSuper : sevens) {
@@ -17,9 +19,12 @@ public class SevenTransformacionImpl implements SevenTransformacion {
                 break;
             }
         }
+
         if (sevenRepetido != null) {
             sevenRepetido.getCategoria().add("Transformacion");
-        } else {
+        }
+
+        else {
             seven.getCategoria().add("Transformacion");
             sevens.add(seven);
         }

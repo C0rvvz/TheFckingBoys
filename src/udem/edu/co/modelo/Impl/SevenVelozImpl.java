@@ -6,9 +6,11 @@ import java.util.List;
 
 public class SevenVelozImpl implements SevenVeloz {
     private List<TheSevenImpl> sevens;
+
     public SevenVelozImpl(List<TheSevenImpl> sevens) {
         this.sevens = sevens;
     }
+
     public void agregarSevenVeloz(TheSevenImpl seven) {
         TheSevenImpl sevenRepetido = null;
         for (TheSevenImpl repetidoSuper : sevens) {
@@ -17,9 +19,12 @@ public class SevenVelozImpl implements SevenVeloz {
                 break;
             }
         }
+
         if (sevenRepetido != null) {
             sevenRepetido.getCategoria().add("Veloz");
-        } else {
+        }
+
+        else {
             seven.getCategoria().add("Veloz");
             sevens.add(seven);
         }

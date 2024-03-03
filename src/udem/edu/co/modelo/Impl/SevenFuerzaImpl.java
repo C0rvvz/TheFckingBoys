@@ -1,11 +1,16 @@
 package udem.edu.co.modelo.Impl;
+
 import udem.edu.co.modelo.SevenFuerza;
+
 import java.util.List;
+
 public class SevenFuerzaImpl implements SevenFuerza {
     private List<TheSevenImpl> sevens;
+
     public SevenFuerzaImpl(List<TheSevenImpl> sevens) {
         this.sevens = sevens;
     }
+
     public void agregarSevenFuerza(TheSevenImpl seven) {
         TheSevenImpl sevenRepetido = null;
         for (TheSevenImpl repetidoSuper : sevens) {
@@ -14,9 +19,12 @@ public class SevenFuerzaImpl implements SevenFuerza {
                 break;
             }
         }
+
         if (sevenRepetido != null) {
             sevenRepetido.getCategoria().add("Fuerte");
-        } else {
+        }
+
+        else {
             seven.getCategoria().add("Fuerte");
             sevens.add(seven);
         }

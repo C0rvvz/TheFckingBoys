@@ -6,9 +6,11 @@ import java.util.List;
 
 public class SevenInmortalImpl implements SevenInmortal {
     private List<TheSevenImpl> sevens;
+
     public SevenInmortalImpl(List<TheSevenImpl> sevens) {
         this.sevens = sevens;
     }
+
     public void agregarSevenInmortal(TheSevenImpl seven) {
         TheSevenImpl sevenRepetido = null;
         for (TheSevenImpl repetidoSuper : sevens) {
@@ -17,9 +19,12 @@ public class SevenInmortalImpl implements SevenInmortal {
                 break;
             }
         }
+
         if (sevenRepetido != null) {
             sevenRepetido.getCategoria().add("Inmortal");
-        } else {
+        }
+
+        else {
             seven.getCategoria().add("Inmortal");
             sevens.add(seven);
         }
