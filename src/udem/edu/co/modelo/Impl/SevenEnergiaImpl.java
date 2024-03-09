@@ -2,30 +2,23 @@ package udem.edu.co.modelo.Impl;
 
 import udem.edu.co.modelo.SevenEnergia;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class SevenEnergiaImpl implements SevenEnergia {
-    private List<TheSevenImpl> sevens;
+    private List<TheSevenImpl> listaSevens;
 
-    public SevenEnergiaImpl(List<TheSevenImpl> sevens) {
-        this.sevens = sevens;
+    public SevenEnergiaImpl() {
+        this.listaSevens = new ArrayList<>();
+        this.listaSevens.add(new TheSevenImpl("Stormfront", new ArrayList<>()));
+        this.listaSevens.add(new TheSevenImpl("Starlight", new ArrayList<>()));
     }
 
-    public void agregarSevenEnergia(TheSevenImpl seven) {
-        TheSevenImpl sevenRepetido = null;
-        for (TheSevenImpl repetidoSuper : sevens) {
-            if (repetidoSuper.getNombre().equals(seven.getNombre())) {
-                sevenRepetido = repetidoSuper;
-                break;
-            }
-        }
+    public List<TheSevenImpl> getListaSevens() {
+        return listaSevens;
+    }
 
-        if (sevenRepetido != null) {
-            sevenRepetido.getCategoria().add("Manipulacion de Energia");
-
-        } else {
-            seven.getCategoria().add("Manipulacion de Energia");
-            sevens.add(seven);
-        }
+    public void setListaSevens(List<TheSevenImpl> listaSevens) {
+        this.listaSevens = listaSevens;
     }
 }

@@ -2,31 +2,25 @@ package udem.edu.co.modelo.Impl;
 
 import udem.edu.co.modelo.SevenInmortal;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class SevenInmortalImpl implements SevenInmortal {
-    private List<TheSevenImpl> sevens;
+    private List<TheSevenImpl> listaSevens;
 
-    public SevenInmortalImpl(List<TheSevenImpl> sevens) {
-        this.sevens = sevens;
+    public SevenInmortalImpl() {
+        this.listaSevens = new ArrayList<>();
+        this.listaSevens.add(new TheSevenImpl("Homelander", new ArrayList<>()));
+        this.listaSevens.add(new TheSevenImpl("Queen Maeve", new ArrayList<>()));
+        this.listaSevens.add(new TheSevenImpl("Black Noir", new ArrayList<>()));
+        this.listaSevens.add(new TheSevenImpl("The Deep", new ArrayList<>()));
     }
 
-    public void agregarSevenInmortal(TheSevenImpl seven) {
-        TheSevenImpl sevenRepetido = null;
-        for (TheSevenImpl repetidoSuper : sevens) {
-            if (repetidoSuper.getNombre().equals(seven.getNombre())) {
-                sevenRepetido = repetidoSuper;
-                break;
-            }
-        }
+    public List<TheSevenImpl> getListaSevens() {
+        return listaSevens;
+    }
 
-        if (sevenRepetido != null) {
-            sevenRepetido.getCategoria().add("Inmortal");
-        }
-
-        else {
-            seven.getCategoria().add("Inmortal");
-            sevens.add(seven);
-        }
+    public void setListaSevens(List<TheSevenImpl> listaSevens) {
+        this.listaSevens = listaSevens;
     }
 }

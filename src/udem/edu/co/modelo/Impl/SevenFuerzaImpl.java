@@ -2,31 +2,25 @@ package udem.edu.co.modelo.Impl;
 
 import udem.edu.co.modelo.SevenFuerza;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class SevenFuerzaImpl implements SevenFuerza {
-    private List<TheSevenImpl> sevens;
+    private List<TheSevenImpl> listaSevens;
 
-    public SevenFuerzaImpl(List<TheSevenImpl> sevens) {
-        this.sevens = sevens;
+    public SevenFuerzaImpl() {
+        this.listaSevens = new ArrayList<>();
+        this.listaSevens.add(new TheSevenImpl("Homelander", new ArrayList<>()));
+        this.listaSevens.add(new TheSevenImpl("Queen Maeve", new ArrayList<>()));
+        this.listaSevens.add(new TheSevenImpl("Black Noir", new ArrayList<>()));
+        this.listaSevens.add(new TheSevenImpl("A-Train", new ArrayList<>()));
     }
 
-    public void agregarSevenFuerza(TheSevenImpl seven) {
-        TheSevenImpl sevenRepetido = null;
-        for (TheSevenImpl repetidoSuper : sevens) {
-            if (repetidoSuper.getNombre().equals(seven.getNombre())) {
-                sevenRepetido = repetidoSuper;
-                break;
-            }
-        }
+    public List<TheSevenImpl> getListaSevens() {
+        return listaSevens;
+    }
 
-        if (sevenRepetido != null) {
-            sevenRepetido.getCategoria().add("Fuerte");
-        }
-
-        else {
-            seven.getCategoria().add("Fuerte");
-            sevens.add(seven);
-        }
+    public void setListaSevens(List<TheSevenImpl> listaSevens) {
+        this.listaSevens = listaSevens;
     }
 }

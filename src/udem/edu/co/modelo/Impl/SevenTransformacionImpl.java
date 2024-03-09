@@ -2,31 +2,23 @@ package udem.edu.co.modelo.Impl;
 
 import udem.edu.co.modelo.SevenTransformacion;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class SevenTransformacionImpl implements SevenTransformacion {
-    private List<TheSevenImpl> sevens;
+    private List<TheSevenImpl> listaSevens;
 
-    public SevenTransformacionImpl(List<TheSevenImpl> sevens) {
-        this.sevens = sevens;
+    public SevenTransformacionImpl() {
+        this.listaSevens = new ArrayList<>();
+        this.listaSevens.add(new TheSevenImpl("Translucent", new ArrayList<>()));
+        this.listaSevens.add(new TheSevenImpl("Shape-shifter", new ArrayList<>()));
     }
 
-    public void agregarSevenTransformacion(TheSevenImpl seven) {
-        TheSevenImpl sevenRepetido = null;
-        for (TheSevenImpl repetidoSuper : sevens) {
-            if (repetidoSuper.getNombre().equals(seven.getNombre())) {
-                sevenRepetido = repetidoSuper;
-                break;
-            }
-        }
+    public List<TheSevenImpl> getListaSevens() {
+        return listaSevens;
+    }
 
-        if (sevenRepetido != null) {
-            sevenRepetido.getCategoria().add("Transformacion");
-        }
-
-        else {
-            seven.getCategoria().add("Transformacion");
-            sevens.add(seven);
-        }
+    public void setListaSevens(List<TheSevenImpl> listaSevens) {
+        this.listaSevens = listaSevens;
     }
 }

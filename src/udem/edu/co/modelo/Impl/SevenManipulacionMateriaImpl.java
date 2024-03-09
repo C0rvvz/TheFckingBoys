@@ -2,31 +2,22 @@ package udem.edu.co.modelo.Impl;
 
 import udem.edu.co.modelo.SevenManipulacionMateria;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class SevenManipulacionMateriaImpl implements SevenManipulacionMateria {
-    private List<TheSevenImpl> sevens;
+    private List<TheSevenImpl> listaSevens;
 
-    public SevenManipulacionMateriaImpl(List<TheSevenImpl> sevens) {
-        this.sevens = sevens;
+    public SevenManipulacionMateriaImpl() {
+        this.listaSevens = new ArrayList<>();
+        this.listaSevens.add(new TheSevenImpl("Lamplighter", new ArrayList<>()));
     }
 
-    public void agregarSevenManipulacionMateria(TheSevenImpl seven) {
-        TheSevenImpl sevenRepetido = null;
-        for (TheSevenImpl repetidoSuper : sevens) {
-            if (repetidoSuper.getNombre().equals(seven.getNombre())) {
-                sevenRepetido = repetidoSuper;
-                break;
-            }
-        }
+    public List<TheSevenImpl> getListaSevens() {
+        return listaSevens;
+    }
 
-        if (sevenRepetido != null) {
-            sevenRepetido.getCategoria().add("Manipulacion Material");
-        }
-
-        else {
-            seven.getCategoria().add("Manipulacion Material");
-            sevens.add(seven);
-        }
+    public void setListaSevens(List<TheSevenImpl> listaSevens) {
+        this.listaSevens = listaSevens;
     }
 }
