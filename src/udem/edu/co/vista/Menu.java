@@ -12,18 +12,48 @@ public class Menu {
     private Scanner scanner;
     private boolean menuMostrado = false;
     private List<TheSevenImpl> sevens;
+    private List<TheSevenImpl> sevense = new ArrayList<>();
 
-    public Menu(List<TheSevenImpl> sevens) {
+
+    public Menu(List<TheSevenImpl> sevenEnergia,List<TheSevenImpl> sevenFuerza,List<TheSevenImpl> sevenAnimal,List<TheSevenImpl> sevenMental,List<TheSevenImpl> sevenInmortal,List<TheSevenImpl> sevenMateriaL,List<TheSevenImpl> sevenTransformacion,List<TheSevenImpl> sevenVeloz,List<TheSevenImpl> sevenVolar) {
         this.scanner = new Scanner(System.in);
         this.menuMostrado = menuMostrado;
-        this.sevens = sevens;
+
+        for (TheSevenImpl lseven: sevenEnergia) {
+            sevense.add(lseven);
+        }
+        for (TheSevenImpl lseven: sevenFuerza) {
+            sevense.add(lseven);
+        }
+        for (TheSevenImpl lseven: sevenAnimal) {
+            sevense.add(lseven);
+        }
+        for (TheSevenImpl lseven: sevenMental) {
+            sevense.add(lseven);
+        }
+        for (TheSevenImpl lseven: sevenInmortal) {
+            sevense.add(lseven);
+        }
+        for (TheSevenImpl lseven: sevenMateriaL) {
+            sevense.add(lseven);
+        }
+        for (TheSevenImpl lseven: sevenTransformacion) {
+            sevense.add(lseven);
+        }
+        for (TheSevenImpl lseven: sevenVeloz) {
+            sevense.add(lseven);
+        }
+        for (TheSevenImpl lseven: sevenVolar) {
+            sevense.add(lseven);
+        }
+        this.sevens = sevense;
     }
 
     public void listarTexto(String texto) {
         System.out.println(texto);
     }
 
-    public void listarSevens() {
+    public void listarSevens(List<TheSevenImpl> sevens) {
         System.out.println("   ⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄ The Seven Disponibles ⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄\n");
         for (TheSevenImpl seven : sevens) {
             System.out.println(seven.getNombre() + " ⠄⠄⠄:> " + seven.getCategoria());
@@ -58,7 +88,7 @@ public class Menu {
             }
         }
 
-        listarSevens();
+        listarSevens(sevensFiltrados) ;
     }
 
     public int listarMenu() {
@@ -101,7 +131,7 @@ public class Menu {
             opcion = listarMenu();
             switch (opcion) {
                 case 1:
-                    listarSevens();
+                    listarSevens(sevens);
                     break;
                 case 2:
                     listarSevensCategoria("Fuerte");

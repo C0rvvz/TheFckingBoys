@@ -13,6 +13,9 @@ public class TheSevenImpl implements TheSeven {
         this.categoria = categoria;
     }
 
+    public TheSevenImpl() {
+    }
+
     public String getNombre() {
         return nombre;
     }

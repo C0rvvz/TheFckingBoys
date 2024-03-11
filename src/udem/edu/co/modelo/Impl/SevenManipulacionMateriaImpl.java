@@ -10,7 +10,6 @@ public class SevenManipulacionMateriaImpl implements SevenManipulacionMateria {
 
     public SevenManipulacionMateriaImpl() {
         this.listaSevens = new ArrayList<>();
-        this.listaSevens.add(new TheSevenImpl("Lamplighter", new ArrayList<>()));
     }
 
     public List<TheSevenImpl> getListaSevens() {

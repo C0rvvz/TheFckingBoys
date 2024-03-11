@@ -11,6 +11,7 @@ public class SevenFuerzaUseCaseImpl implements SevenFuerzaUseCase {
     private SevenFuerzaImpl sevenFuerza;
 
     public SevenFuerzaUseCaseImpl(SevenFuerzaImpl sevenFuerza) {
+
         this.sevenFuerza = sevenFuerza;
     }
 

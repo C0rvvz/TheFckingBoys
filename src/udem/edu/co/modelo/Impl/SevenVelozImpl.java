@@ -10,8 +10,6 @@ public class SevenVelozImpl implements SevenVeloz {
 
     public SevenVelozImpl() {
         this.listaSevens = new ArrayList<>();
-        this.listaSevens.add(new TheSevenImpl("A-Train", new ArrayList<>()));
-
     }
 
     public List<TheSevenImpl> getListaSevens() {

@@ -10,10 +10,6 @@ public class SevenFuerzaImpl implements SevenFuerza {
 
     public SevenFuerzaImpl() {
         this.listaSevens = new ArrayList<>();
-        this.listaSevens.add(new TheSevenImpl("Homelander", new ArrayList<>()));
-        this.listaSevens.add(new TheSevenImpl("Queen Maeve", new ArrayList<>()));
-        this.listaSevens.add(new TheSevenImpl("Black Noir", new ArrayList<>()));
-        this.listaSevens.add(new TheSevenImpl("A-Train", new ArrayList<>()));
     }
 
     public List<TheSevenImpl> getListaSevens() {

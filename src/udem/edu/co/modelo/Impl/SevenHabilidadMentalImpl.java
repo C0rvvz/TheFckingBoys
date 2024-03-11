@@ -10,7 +10,6 @@ public class SevenHabilidadMentalImpl implements SevenHabilidadMental {
 
     public SevenHabilidadMentalImpl() {
         this.listaSevens = new ArrayList<>();
-        this.listaSevens.add(new TheSevenImpl("Mesmer", new ArrayList<>()));
     }
 
     public List<TheSevenImpl> getListaSevens() {

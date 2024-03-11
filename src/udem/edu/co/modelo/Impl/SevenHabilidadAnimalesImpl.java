@@ -10,8 +10,6 @@ public class SevenHabilidadAnimalesImpl implements SevenHabilidadAnimales {
 
     public SevenHabilidadAnimalesImpl() {
         this.listaSevens = new ArrayList<>();
-        this.listaSevens.add(new TheSevenImpl("The Deep", new ArrayList<>()));
-
     }
 
     public List<TheSevenImpl> getListaSevens() {

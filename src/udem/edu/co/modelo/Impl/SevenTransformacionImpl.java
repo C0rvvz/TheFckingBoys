@@ -10,8 +10,6 @@ public class SevenTransformacionImpl implements SevenTransformacion {
 
     public SevenTransformacionImpl() {
         this.listaSevens = new ArrayList<>();
-        this.listaSevens.add(new TheSevenImpl("Translucent", new ArrayList<>()));
-        this.listaSevens.add(new TheSevenImpl("Shape-shifter", new ArrayList<>()));
     }
 
     public List<TheSevenImpl> getListaSevens() {

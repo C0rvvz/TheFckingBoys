@@ -10,8 +10,6 @@ public class SevenVoladorImpl implements SevenVolador {
 
     public SevenVoladorImpl() {
         this.listaSevens = new ArrayList<>();
-        this.listaSevens.add(new TheSevenImpl("Homelander", new ArrayList<>()));
-        this.listaSevens.add(new TheSevenImpl("Starlight", new ArrayList<>()));
     }
 
     public List<TheSevenImpl> getListaSevens() {
